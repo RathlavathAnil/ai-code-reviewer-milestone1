@@ -1,33 +1,86 @@
-# AI Code Reviewer –  (Infosys Springboard)
+# 🚀 AI Code Reviewer – (Infosys Springboard)
 
-This repository contains the first milestone of the **AI Code Reviewer** project developed as part of the *Infosys Springboard* learning program.
+An AI-powered hybrid code analysis tool developed as part of the *Infosys Springboard Learning Program*.
 
- Project Overview
+This project combines **Python AST-based static analysis** with **LLM-powered intelligent suggestions** to help developers write cleaner, more optimized, and error-free Python code.
 
-The goal of this milestone is to build a **Python AST-based code parser** that analyzes Python code and detects syntax errors.
-It uses Python’s built-in `ast` module to parse code safely and return structured results.
+---
 
-⚙️ Features
+# 📌 Project Overview
 
-* Parses Python code using Abstract Syntax Tree (AST)
-* Detects syntax errors
-* Returns structured output with success status
-* Clean and modular Python implementation
+The AI Code Reviewer is designed to:
 
-🛠️ Tech Stack
-Python
-AST (Abstract Syntax Tree)
+- Parse and analyze Python code using Abstract Syntax Tree (AST)
+- Detect syntax errors
+- Identify logical issues (unused imports, unreachable code, undefined variables, infinite loops)
+- Provide intelligent suggestions using Large Language Models (LLMs)
+- Explain issues clearly for beginner-friendly understanding
+- Analyze time and space complexity
 
-📂 Project Structure
+The project is being built incrementally using milestone-based development.
 
-* `code_parser.py` – Core parser logic
-* `requirements.txt` – Project dependencies
-* `.gitignore` – Excludes sensitive files like `.env`
+---
 
-🔒 Security Note
+# ⚙️ Features
 
-API keys and environment variables are stored in a `.env` file which is intentionally excluded from this repository for security reasons.
+## ✅ Milestone 1 – Static Code Analysis (AST Based)
 
-🎯 Milestone Objective
+- Safe parsing using Python's built-in `ast` module
+- Syntax error detection
+- Structured error reporting
+- Modular visitor-based architecture
 
-To implement a basic static code parser as the foundation for future AI-powered code analysis and suggestions.
+## ✅ Milestone 2 – AI-Powered Code Suggestions
+
+- Integrated Groq LLM via LangChain
+- Generates detailed explanations for:
+  - Syntax errors
+  - Undefined variables
+  - Logical mistakes
+- Suggests improvements with reasoning
+- Provides time and space complexity analysis
+- Beginner-friendly explanation style
+
+---
+
+# 🛠️ Tech Stack
+
+- **Python**
+- **AST (Abstract Syntax Tree)**
+- **LangChain**
+- **Groq LLM (LLaMA 3.1)**
+- **python-dotenv**
+
+---
+
+# 📂 Project Structure
+AI Code Reviewer/
+│
+├── code_parser.py # AST-based syntax parser
+├── error_detector_visitor.py # Logical issue detection using AST
+├── ai_suggester.py # LLM-powered suggestion engine
+├── requirements.txt # Dependencies
+├── README.md
+└── .gitignore
+
+
+---
+
+# 🔒 Security
+
+- API keys are stored securely in a `.env` file
+- `.env` is excluded via `.gitignore`
+- Virtual environments (`venv/`) are not committed
+- No sensitive credentials are stored in the repository
+
+---
+
+# 📊 How It Works
+
+1. User provides Python code.
+2. AST module parses and checks for syntax errors.
+3. Custom visitor detects logical issues.
+4. LLM analyzes code contextually.
+5. Tool returns structured + human-readable suggestions.
+
+---
